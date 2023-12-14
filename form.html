@@ -1,77 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css"
+    />
+    <script src="script.js"></script>
+  </head>
 
-<body>
+  <body>
+    <div class="form_container">
+      <div class="form">
+        <form action="success.html" method="post">
+          <!--Anrede-->
 
+          <div class="inputGroup">
+            <label for="anrede">Anrede:</label>
+            <select name="" id="anrede">
+              <option value="Herr">Herr</option>
+              <option value="Frau">Frau</option>
+            </select>
+          </div>
 
-    <div class="container">
-        <div class="form">
-            <form action="success.html" method="post">
+          <!--Vorname-->
+          <div class="inputGroup">
+            <label for="vorname">Vorname:</label>
+            <input
+              type="text"
+              name="vorname"
+              id="vorname"
+              placeholder="Vorname"
+            />
+          </div>
+          <!--Nachname-->
+          <div class="inputGroup">
+            <label for="nachname">Nachname:</label>
+            <input
+              type="text"
+              name="nachname"
+              id="nachname"
+              placeholder="Nachname"
+            />
+          </div>
+          <!--Geburtsdatum-->
+          <div class="inputGroup">
+            <label for="geburtsdatum">Geburtsdatum:</label>
+            <input type="date" name="geburtsdatum" id="geburtsdatum" />
+          </div>
+          <!--Strasse-->
+          <div class="inputGroup">
+            <label for="strasse">Strasse:</label>
+            <input
+              type="text"
+              name="strasse"
+              id="strasse"
+              placeholder="Strasse..."
+            />
+          </div>
+          <!--PLZ-->
+          <div class="inputGroup">
+            <label for="plz">PLZ:</label>
+            <input type="text" name="plz" id="plz" placeholder="8000" />
+          </div>
+          <!--Ort-->
+          <div class="inputGroup">
+            <label for="ort">Ort:</label>
+            <input type="text" name="ort" id="ort" placeholder="Zürich" />
+          </div>
+          <!--E-mail-->
+          <div class="inputGroup">
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="vorname@example.com"
+            />
+          </div>
+          <!--Vorname-->
+          <div class="inputGroup-AGB">
+            <input type="checkbox" name="agb" id="agb" />
+            <label for="agb">I agree with the <b>terms of Lingua</b> </label>
+          </div>
+        </form>
+      </div>
 
-                <!--Anrede-->
-
-                <div class="inputGroup">
-                    <label for="anrede">Anrede:</label>
-                    <select name="" id="anrede">
-                        <option value="Herr">Herr</option>
-                        <option value="Frau">Frau</option>
-                    </select>
-                </div>
-
-                <!--Vorname-->
-                <div class="inputGroup">
-                    <label for="vorname">Vorname:</label>
-                    <input type="text" name="vorname" id="vorname" placeholder="Vorname">
-                </div>
-                <!--Nachname-->
-                <div class="inputGroup">
-                    <label for="nachname">Nachname:</label>
-                    <input type="text" name="nachname" id="nachname" placeholder="Nachname">
-                </div>
-                <!--Geburtsdatum-->
-                <div class="inputGroup">
-                    <label for="anrede">Geburtsdatum:</label>
-                    <input type="date" name="geburtsdatum" id="geburtsdatum">
-
-                </div>
-                <!--Vorname-->
-                <div class="inputGroup">
-                    <label for="anrede">Anrede:</label>
-                    <input type="text" name="vorname" id="vorname" placeholder="Vorname">
-                </div>
-                <!--Vorname-->
-                <div class="inputGroup">
-                    <label for="anrede">Anrede:</label>
-                    <input type="text" name="vorname" id="vorname" placeholder="Vorname">
-                </div>
-                <!--Vorname-->
-                <div class="inputGroup">
-                    <label for="anrede">Anrede:</label>
-                    <input type="text" name="vorname" id="vorname" placeholder="Vorname">
-                </div>
-                <!--Vorname-->
-                <div class="inputGroup">
-                    <label for="anrede">Anrede:</label>
-                    <input type="text" name="vorname" id="vorname" placeholder="Vorname">
-                </div>
-                <!--Vorname-->
-                <div class="inputGroup">
-                    <label for="anrede">Anrede:</label>
-                    <input type="text" name="vorname" id="vorname" placeholder="Vorname">
-                </div>
-            </form>
-        </div>
-        <div class="button">
-
-        </div>
+      <a class="button_form" href="success.html">BOOK NOW</a>
     </div>
-</body>
-
+  </body>
 </html>
