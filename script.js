@@ -6,6 +6,7 @@ function checkInput(){
             let checkAGB = document.getElementById("agb")
             sessionStorage.setItem("vorname",data[0].value )
             sessionStorage.setItem("nachname", data[1].value)
+    
            
             let wrongData = []
 
@@ -17,7 +18,7 @@ function checkInput(){
 
             if(wrongData.length>0 || !checkAGB.checked){
                 if(wrongData.length>0){
-                    wrongData.forEach(e=>{e.style.border ="2px solid red"; alert(`Wrong Data Input:${e.name}` )})
+                    wrongData.forEach(e=>{e.style.border ="2px solid red"; alert(`Wrong Data Input:${e.name}`)})
                     checkAGB.style.border = "2px solid red"
                     return false
                 }else if(!checkAGB.cheked){
@@ -33,8 +34,7 @@ function checkInput(){
             
 
             document.getElementById("myForm").submit();
-      
-         
+           
     }
 
 
@@ -45,8 +45,11 @@ function checkInput(){
         document.getElementById("welcome_vorname").textContent = vorname.toUpperCase();
         document.getElementById("welcome_nachname").textContent = nachname.toUpperCase();
     }
-   welcome()
+   
 
+    
+ 
+    welcome();
     
         
 
