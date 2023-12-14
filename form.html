@@ -15,13 +15,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css"
     />
-    <script src="script.js"></script>
   </head>
 
   <body>
     <div class="form_container">
       <div class="form">
-        <form action="success.html" method="post">
+        <form
+          action="success.html"
+          onsubmit="checkInput()"
+          id="myForm"
+          name="myForm"
+        >
           <!--Anrede-->
 
           <div class="inputGroup">
@@ -40,6 +44,8 @@
               name="vorname"
               id="vorname"
               placeholder="Vorname"
+              minlength="2"
+              maxlength="100"
             />
           </div>
           <!--Nachname-->
@@ -50,6 +56,8 @@
               name="nachname"
               id="nachname"
               placeholder="Nachname"
+              minlength="2"
+              maxlength="100"
             />
           </div>
           <!--Geburtsdatum-->
@@ -65,17 +73,33 @@
               name="strasse"
               id="strasse"
               placeholder="Strasse..."
+              minlength="2"
+              maxlength="100"
             />
           </div>
           <!--PLZ-->
           <div class="inputGroup">
             <label for="plz">PLZ:</label>
-            <input type="text" name="plz" id="plz" placeholder="8000" />
+            <input
+              type="number"
+              name="plz"
+              id="plz"
+              placeholder="8000"
+              minlength="2"
+              maxlength="10"
+            />
           </div>
           <!--Ort-->
           <div class="inputGroup">
             <label for="ort">Ort:</label>
-            <input type="text" name="ort" id="ort" placeholder="Zürich" />
+            <input
+              type="text"
+              name="ort"
+              id="ort"
+              placeholder="Zürich"
+              minlength="2"
+              maxlength="100"
+            />
           </div>
           <!--E-mail-->
           <div class="inputGroup">
@@ -85,6 +109,8 @@
               name="email"
               id="email"
               placeholder="vorname@example.com"
+              minlength="3"
+              maxlength="100"
             />
           </div>
           <!--Vorname-->
@@ -92,10 +118,14 @@
             <input type="checkbox" name="agb" id="agb" />
             <label for="agb">I agree with the <b>terms of Lingua</b> </label>
           </div>
+
+          <input type="submit" value="BOOK NOW" id="submit_input" />
         </form>
       </div>
-
-      <a class="button_form" href="success.html">BOOK NOW</a>
     </div>
   </body>
+  <script src="script.js">
+
+    // document.getElementById("myForm").submit()
+  </script>
 </html>
