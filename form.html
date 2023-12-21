@@ -1,131 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css"
-    />
-  </head>
 
-  <body>
-    <div class="form_container">
-      <div class="form">
-        <form
-          action="success.html"
-          onsubmit="checkInput()"
-          id="myForm"
-          name="myForm"
-        >
-          <!--Anrede-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css" /> -->
+</head>
 
-          <div class="inputGroup">
-            <label for="anrede">Anrede:</label>
-            <select name="" id="anrede">
-              <option value="Herr">Herr</option>
-              <option value="Frau">Frau</option>
-            </select>
-          </div>
+<body>
+  <div class="form_container">
+    <div class="form">
+      <form action="success.html" onsubmit="checkInput()" id="myForm" name="myForm">
+        <!--Anrede-->
 
-          <!--Vorname-->
-          <div class="inputGroup">
-            <label for="vorname">Vorname:</label>
-            <input
-              type="text"
-              name="vorname"
-              id="vorname"
-              placeholder="Vorname"
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--Nachname-->
-          <div class="inputGroup">
-            <label for="nachname">Nachname:</label>
-            <input
-              type="text"
-              name="nachname"
-              id="nachname"
-              placeholder="Nachname"
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--Geburtsdatum-->
-          <div class="inputGroup">
-            <label for="geburtsdatum">Geburtsdatum:</label>
-            <input type="date" name="geburtsdatum" id="geburtsdatum" />
-          </div>
-          <!--Strasse-->
-          <div class="inputGroup">
-            <label for="strasse">Strasse:</label>
-            <input
-              type="text"
-              name="strasse"
-              id="strasse"
-              placeholder="Strasse..."
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--PLZ-->
-          <div class="inputGroup">
-            <label for="plz">PLZ:</label>
-            <input
-              type="number"
-              name="plz"
-              id="plz"
-              placeholder="8000"
-              minlength="2"
-              maxlength="10"
-            />
-          </div>
-          <!--Ort-->
-          <div class="inputGroup">
-            <label for="ort">Ort:</label>
-            <input
-              type="text"
-              name="ort"
-              id="ort"
-              placeholder="Zürich"
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--E-mail-->
-          <div class="inputGroup">
-            <label for="email">E-mail:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="vorname@example.com"
-              minlength="3"
-              maxlength="100"
-            />
-          </div>
-          <!--Vorname-->
-          <div class="inputGroup-AGB">
-            <input type="checkbox" name="agb" id="agb" />
-            <label for="agb">I agree with the <b>terms of Lingua</b> </label>
-          </div>
+        <div class="inputGroup">
+          <label for="anrede">Anrede:</label>
+          <select name="" id="anrede">
+            <option value="Herr">Herr</option>
+            <option value="Frau">Frau</option>
+          </select>
+        </div>
 
-          <input type="submit" value="BOOK NOW" id="submit_input" />
-        </form>
-      </div>
+        <!--Vorname-->
+        <div class="inputGroup">
+          <label for="vorname">Vorname:</label>
+          <input type="text" name="vorname" id="vorname" placeholder="Vorname" minlength="2" maxlength="100" />
+        </div>
+        <!--Nachname-->
+        <div class="inputGroup">
+          <label for="nachname">Nachname:</label>
+          <input type="text" name="nachname" id="nachname" placeholder="Nachname" minlength="2" maxlength="100" />
+        </div>
+        <!--Geburtsdatum-->
+        <div class="inputGroup">
+          <label for="geburtsdatum">Geburtsdatum:</label>
+          <input type="date" name="geburtsdatum" id="geburtsdatum" />
+        </div>
+        <!--Strasse-->
+        <div class="inputGroup">
+          <label for="strasse">Strasse:</label>
+          <input type="text" name="strasse" id="strasse" placeholder="Strasse..." minlength="2" maxlength="100" />
+        </div>
+        <!--PLZ-->
+        <div class="inputGroup">
+          <label for="plz">PLZ:</label>
+          <input type="number" name="plz" id="plz" placeholder="8000" minlength="2" maxlength="10" />
+        </div>
+        <!--Ort-->
+        <div class="inputGroup">
+          <label for="ort">Ort:</label>
+          <input type="text" name="ort" id="ort" placeholder="Zürich" minlength="2" maxlength="100" />
+        </div>
+        <!--E-mail-->
+        <div class="inputGroup">
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" placeholder="vorname@example.com" minlength="3" maxlength="100"
+            autocomplete="email" />
+        </div>
+        <!--Vorname-->
+        <div class="inputGroup-AGB">
+
+          <input type="checkbox" name="agb" id="agb" />
+
+
+          <label for="agb">I agree with the <b>terms of Lingua</b> </label>
+        </div>
+
+        <input type="submit" value="BOOK NOW" id="submit_input" />
+      </form>
     </div>
-  </body>
-  <script src="script.js">
+  </div>
+</body>
+<script src="script.js">
 
-    // document.getElementById("myForm").submit()
-  </script>
+  // document.getElementById("myForm").submit()
+</script>
+
 </html>

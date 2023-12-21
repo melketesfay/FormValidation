@@ -13,9 +13,8 @@
 body {
 
     margin: 0;
-    
-    height: 100vh;
-color: var(--main-text-color);
+    min-height: 100vh;
+    color: var(--main-text-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,11 +35,11 @@ color: var(--main-text-color);
     width: 100%;
     /* test responsive */
     max-width: 600px;
-    
+
 }
 
 
-.form_container{
+.form_container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -50,7 +49,7 @@ color: var(--main-text-color);
     width: 100%;
     /* test responsive */
     max-width: 600px;
-   
+
 
 }
 
@@ -70,30 +69,32 @@ h1 {
     font-size: 4rem;
 }
 
-.main_h2{
+.main_h2 {
     font-size: 1.2rem;
 }
-h2{
+
+h2 {
     margin: 0;
     padding: 0;
     font-size: 2rem;
     font-weight: 700;
 }
 
-h3{
+h3 {
     margin: 0;
     padding: 0;
 }
-#top_h3{
+
+#top_h3 {
     margin-top: 2rem;
 }
 
-#welcome_vorname{
+#welcome_vorname {
     font-size: 2.1rem;
     font-weight: 900;
 }
 
-#welcome_nachname{
+#welcome_nachname {
     font-size: 2.1rem;
     font-weight: 900;
 }
@@ -101,7 +102,7 @@ h3{
 
 
 .button {
-   
+
     margin-bottom: 2rem;
     /* margin-top: 5rem; */
     margin-left: auto;
@@ -116,11 +117,11 @@ h3{
 
     /*com*/
 
-   
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 
@@ -130,20 +131,21 @@ h3{
 
     /* test responsive */
     width: 100%;
-    
+
 }
 
-.inputGroup label{
+.inputGroup label {
     font-weight: bold;
-    
+
 }
 
-.inputGroup select,input {
+.inputGroup select,
+input {
 
     /* test responsive */
     width: 100%;
     height: 2rem;
-   
+
     /* width: 17rem;
     height: 2rem; */
     background-color: var(--input-field-color);
@@ -154,7 +156,7 @@ h3{
 }
 
 
-.inputGroup-AGB{
+.inputGroup-AGB {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -163,16 +165,25 @@ h3{
     min-width: 17rem;
     width: 100%;
 }
-.inputGroup-AGB input{
-  
-   width: 2rem;
-   height:2rem ;
+
+.inputGroup-AGB input {
+
+    width: 2rem;
+    height: 2rem;
     margin-left: 0;
     margin-right: 0.5rem;
     border-radius: 1rem;
     accent-color: var(--main-bg-color);
     /* text-decoration: none;
-    border-style: none; */ 
+    border-style: none; */
+}
+
+.inputGroup-AGB input::before {
+    content: "sdsd";
+    color: red;
+    width: 10rem;
+    position: absolute;
+    top: 100%;
 }
 
 
@@ -186,15 +197,15 @@ form {
 
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--main-text-color);
     font-size: 1.5rem;
     font-weight: 900;
 }
 
-.button_form{
-   margin-top: 2rem;
+.button_form {
+    margin-top: 2rem;
     width: 15rem;
     height: 5rem;
     font-size: 1.5rem;
@@ -205,11 +216,11 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 
-#submit_input{
+#submit_input {
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -227,23 +238,23 @@ a{
 
 
 @media only screen and (min-width: 600px) {
-    .main_h2
-{
-    margin-top: 4rem;
-}  
+    .main_h2 {
+        margin-top: 4rem;
+    }
 
-.text{
-    gap: 1rem;
-}
+    .text {
+        gap: 1rem;
+    }
 
-h1{
-    font-size: 5rem;
-}
+    h1 {
+        font-size: 5rem;
+    }
 
-h2{
-    font-size: 3rem;
-}
-h3{
-    font-size: 2rem;
-}
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
 }
