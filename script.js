@@ -21,28 +21,30 @@ function checkInput() {
       wrongData.push(data[i]);
     }
   }
-  data.forEach((e) => (e.style.border = "none"));
+  //   data.forEach((e) => (e.style.border = "none"));
+
+  document.querySelectorAll("p").forEach((e) => e.remove());
+
+  document.querySelectorAll("p").forEach((e) => (e.id = "alert"));
 
   if (wrongData.length > 0 || !checkAGB.checked) {
     if (wrongData.length > 0) {
       wrongData.forEach((e) => {
-        // let alertnode = document.createElement("p");
-        // alertnode.appendChild(document.createTextNode(`${e.name} is wrong`));
+        let alertnode = document.createElement("p");
 
-        // alertnode.style.marginBottom = "5px";
-        // alertnode.style.marginTop = "0px";
-        // alertnode.style.color = "red";
-        // alertnode.style.fontWeight = "500";
-        // alertnode.style.display = "block";
-        // alertnode.classList.add("alert");
-        // alertnode.style.border = "2px solid red";
-        // e.parentElement.insertBefore(alertnode, e);
-        // alertnode.innerHTML = `${e.name} is wrong`;
-        // goodData.forEach((e) => e.parentNode.childNodes[1].removeChild);
+        alertnode.style.marginBottom = "5px";
+        alertnode.style.paddingLeft = "5px";
+        alertnode.style.marginTop = "0px";
+        alertnode.style.color = "#bb0000";
+        alertnode.style.fontWeight = "500";
+        alertnode.style.display = "block";
+        alertnode.classList.add("alert");
+        alertnode.style.borderRadius = "5px";
+        alertnode.style.border = "2px solid #ff0000";
+        alertnode.appendChild(document.createTextNode(`${e.name} is wrong`));
+        e.parentNode.insertBefore(alertnode, e);
 
-        // // e.parentNode.insertBefore(alertnode, e);
-        e.style.border = "none";
-        e.style.border = "3px solid red";
+        // e.style.border = "3px solid red";
       });
 
       return false;

@@ -178,13 +178,7 @@ input {
     border-style: none; */
 }
 
-.inputGroup-AGB input::before {
-    content: "sdsd";
-    color: red;
-    width: 10rem;
-    position: absolute;
-    top: 100%;
-}
+
 
 
 form {
@@ -257,4 +251,9 @@ a {
     h3 {
         font-size: 2rem;
     }
+}
+
+
+#agb {
+    background-color: #b60000;
 }
