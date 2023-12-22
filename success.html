@@ -33,19 +33,8 @@
     <a class="button" href="index.html">GO BACK</a>
   </div>
 </body>
-<script src="script.js">
-  document.onload(welcome)
+<script src="success.js">
 
-  function welcome() {
-    let vorname = sessionStorage.getItem("vorname");
-    let nachname = sessionStorage.getItem("nachname");
-
-    document.getElementById("welcome_vorname").innerHTML = vorname.toUpperCase();
-    document.getElementById("welcome_nachname").innerHTML =
-      nachname.toUpperCase();
-  }
-
-  sessionStorage.clear();
 </script>
 
 </html>

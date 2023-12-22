@@ -41,7 +41,9 @@ function checkInput() {
         alertnode.classList.add("alert");
         alertnode.style.borderRadius = "5px";
         alertnode.style.border = "2px solid #ff0000";
-        alertnode.appendChild(document.createTextNode(`${e.name} is wrong`));
+        alertnode.appendChild(
+          document.createTextNode(`Bitte ${e.name} eingeben`)
+        );
         e.parentNode.insertBefore(alertnode, e);
 
         // e.style.border = "3px solid red";
@@ -57,13 +59,19 @@ function checkInput() {
   document.getElementById("myForm").submit();
 }
 
-function welcome() {
-  let vorname = sessionStorage.getItem("vorname");
-  let nachname = sessionStorage.getItem("nachname");
+function removeWarning() {
+  if (this.parentNode.querySelector("p") != null) {
+    // this.parentNode.querySelector("p").style.display = "none";
+    this.parentNode.querySelector("p").style.transition = "transform 0.5s";
+    this.parentNode.querySelector("p").style.transform = "scale(0,0)";
 
-  document.getElementById("welcome_vorname").innerHTML = vorname.toUpperCase();
-  document.getElementById("welcome_nachname").innerHTML =
-    nachname.toUpperCase();
+    setTimeout(() => {
+      this.parentNode.querySelector("p").style.display = "none";
+    }, 500);
+    // this.parentNode.querySelector("p").style.display = "none";
+  }
 }
 
-welcome();
+let inputFields = document.querySelectorAll("input");
+
+inputFields.forEach((e) => e.addEventListener("input", removeWarning));
