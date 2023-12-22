@@ -3,7 +3,7 @@ function checkInput() {
   let data = document.querySelectorAll(".inputGroup input");
   let arrData = Array.from(data);
   let checkAGB = document.getElementById("agb").checked;
-  console.log(!checkAGB);
+  // console.log(!checkAGB);
   sessionStorage.setItem("vorname", data[0].value);
   sessionStorage.setItem("nachname", data[1].value);
 
@@ -52,26 +52,27 @@ function checkInput() {
       return false;
     } else if (!checkAGB) {
       alert("Please Accept Terms");
-      console.log(data);
+      // console.log(data);
       return false;
     }
   }
   document.getElementById("myForm").submit();
 }
 
+//p elemets are added above if a false input is detected
+
 function removeWarning() {
   if (this.parentNode.querySelector("p") != null) {
-    // this.parentNode.querySelector("p").style.display = "none";
+    // this.parentNode.style.display = "flex";
+    // this.parentNode.style.gridTemplateRows = "1fr 1fr 1fr";
+    // this.parentNode.style.overflow = "hidden";
+    // this.parentNode.style.transition = "gridTemplateRows 1s";
+    // this.parentNode.style.gridTemplateRows = "1fr 0fr 1fr";
     this.parentNode.querySelector("p").style.transition = "transform 0.5s";
-    this.parentNode.querySelector("p").style.transform = "scale(0,0)";
+    this.parentNode.querySelector("p").style.transform = "scaleY(0)";
 
     setTimeout(() => {
       this.parentNode.querySelector("p").style.display = "none";
     }, 500);
-    // this.parentNode.querySelector("p").style.display = "none";
   }
 }
-
-let inputFields = document.querySelectorAll("input");
-
-inputFields.forEach((e) => e.addEventListener("input", removeWarning));

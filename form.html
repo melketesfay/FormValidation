@@ -64,10 +64,12 @@
             autocomplete="email" />
         </div>
         <!--Vorname-->
-        <div class="inputGroup-AGB">
+        <div class="inputGroup-AGB" style="position: relative;">
 
           <input type="checkbox" name="agb" id="agb" />
-
+          <div class="coverInput"
+            style="width: 2rem; height: 2rem;margin: 0;padding: 0; position: absolute;bottom: auto; top: auto; background-color: #36a188; z-index: 10; opacity: 0.5; border-radius: 0.1rem; border: 1px solid #2D3E3A;">
+          </div>
 
           <label for="agb">I agree with the <b>terms of Lingua</b> </label>
         </div>
@@ -76,10 +78,11 @@
       </form>
     </div>
   </div>
+
+  <script src="script.js">
+  </script>
+  <script src="form.js"></script>
 </body>
-<script src="script.js">
 
-
-</script>
 
 </html>

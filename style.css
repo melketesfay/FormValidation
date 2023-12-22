@@ -153,6 +153,7 @@ input {
     border-radius: 0.2rem;
     text-decoration: none;
     border-style: none;
+    accent-color: var(--input-field-color);
 }
 
 
@@ -173,7 +174,7 @@ input {
     margin-left: 0;
     margin-right: 0.5rem;
     border-radius: 1rem;
-    accent-color: var(--main-bg-color);
+    accent-color: white;
     /* text-decoration: none;
     border-style: none; */
 }
@@ -256,4 +257,15 @@ a {
 
 #agb {
     background-color: #b60000;
+}
+
+
+/* Stop inputfields changing color during autofill */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+
 }
