@@ -32,15 +32,30 @@ function checkInput() {
       wrongData.forEach((e) => {
         let alertnode = document.createElement("p");
 
-        alertnode.style.marginBottom = "5px";
-        alertnode.style.paddingLeft = "5px";
-        alertnode.style.marginTop = "0px";
-        alertnode.style.color = "#bb0000";
-        alertnode.style.fontWeight = "500";
-        alertnode.style.display = "block";
-        alertnode.classList.add("alert");
-        alertnode.style.borderRadius = "5px";
-        alertnode.style.border = "2px solid #ff0000";
+        alertnode.style.cssText = 
+                `
+                margin-bottom: 5px;
+                margin-top:0px;
+                padding-left:5px;
+                color:#bb0000;
+                font-weight:500;
+                display:block;
+                border: 2px solid red;
+                border-radius:5px;
+                height:25px;
+                `;
+        // alertnode.style.marginBottom = "5px";
+        // alertnode.style.paddingLeft = "5px";
+        // alertnode.style.marginTop = "0px";
+        // alertnode.style.color = "#bb0000";
+        // alertnode.style.fontWeight = "500";
+        // alertnode.style.display = "block";
+        // alertnode.style.overflow= "hidden";
+        // alertnode.style.borderRadius = "5px";
+        // alertnode.style.height = "20px";
+        // alertnode.style.border = "2px solid #ff0000";
+        // alertnode.classList.add("alert");
+       
         alertnode.appendChild(
           document.createTextNode(`Bitte ${e.name} eingeben`)
         );
@@ -68,9 +83,11 @@ function removeWarning() {
     // this.parentNode.style.overflow = "hidden";
     // this.parentNode.style.transition = "gridTemplateRows 1s";
     // this.parentNode.style.gridTemplateRows = "1fr 0fr 1fr";
-    this.parentNode.querySelector("p").style.transition = "transform 0.5s";
-    this.parentNode.querySelector("p").style.transform = "scaleY(0)";
-
+    this.parentNode.querySelector("p").style.border = "none";
+    this.parentNode.querySelector("p").style.margin = "0px";
+    this.parentNode.querySelector("p").style.transition = "All 0.5s";
+    this.parentNode.querySelector("p").style.height = "0px";
+    
     setTimeout(() => {
       this.parentNode.querySelector("p").style.display = "none";
     }, 500);
