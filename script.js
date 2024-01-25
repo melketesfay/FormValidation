@@ -44,30 +44,20 @@ function checkInput() {
                 border-radius:5px;
                 height:25px;
                 `;
-        // alertnode.style.marginBottom = "5px";
-        // alertnode.style.paddingLeft = "5px";
-        // alertnode.style.marginTop = "0px";
-        // alertnode.style.color = "#bb0000";
-        // alertnode.style.fontWeight = "500";
-        // alertnode.style.display = "block";
-        // alertnode.style.overflow= "hidden";
-        // alertnode.style.borderRadius = "5px";
-        // alertnode.style.height = "20px";
-        // alertnode.style.border = "2px solid #ff0000";
-        // alertnode.classList.add("alert");
+  
        
         alertnode.appendChild(
           document.createTextNode(`Bitte ${e.name} eingeben`)
         );
         e.parentNode.insertBefore(alertnode, e);
 
-        // e.style.border = "3px solid red";
+   
       });
 
       return false;
     } else if (!checkAGB) {
       alert("Please Accept Terms");
-      // console.log(data);
+
       return false;
     }
   }
