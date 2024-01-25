@@ -25,6 +25,12 @@ body {
     background-size: cover;
 }
 
+main{
+    width: 100%;
+    /* test responsive */
+    max-width: 600px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
