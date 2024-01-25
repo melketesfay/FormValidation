@@ -64,22 +64,25 @@ function checkInput() {
   document.getElementById("myForm").submit();
 }
 
-//p elemets are added above if a false input is detected
+
+
+
+//removes the error messages on input event. Siehe form.js
 
 function removeWarning() {
   if (this.parentNode.querySelector("p") != null) {
-    // this.parentNode.style.display = "flex";
-    // this.parentNode.style.gridTemplateRows = "1fr 1fr 1fr";
-    // this.parentNode.style.overflow = "hidden";
-    // this.parentNode.style.transition = "gridTemplateRows 1s";
-    // this.parentNode.style.gridTemplateRows = "1fr 0fr 1fr";
-    this.parentNode.querySelector("p").style.border = "none";
-    this.parentNode.querySelector("p").style.margin = "0px";
-    this.parentNode.querySelector("p").style.transition = "All 0.5s";
-    this.parentNode.querySelector("p").style.height = "0px";
+   let errorMsg = this.parentNode.querySelector("p");
+
+   errorMsg.style.cssText = 
+                `
+                margin:0px;
+                border: none;
+                transition: All 0.5s;
+                height:0px;
+                `;
     
     setTimeout(() => {
-      this.parentNode.querySelector("p").style.display = "none";
+      errorMsg.remove();
     }, 500);
   }
 }
