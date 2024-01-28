@@ -25,7 +25,7 @@ body {
     background-size: cover;
 }
 
-main{
+main {
     width: 100%;
     /* test responsive */
     max-width: 600px;
@@ -164,7 +164,7 @@ input {
 }
 
 input:focus {
-    border: 2px solid rgb(239, 3, 207);
+    border: 2px solid rgb(144, 253, 2);
 }
 
 .inputGroup-AGB {
@@ -189,8 +189,8 @@ input:focus {
     border-style: none; */
 }
 
-.coverInput{
-   
+.coverInput {
+
     width: 2rem;
     height: 2rem;
     margin: 0;
