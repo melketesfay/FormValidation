@@ -154,8 +154,12 @@ input {
     text-decoration: none;
     border-style: none;
     accent-color: var(--input-field-color);
+    outline: none;
 }
 
+input:focus {
+    border: 2px solid rgb(239, 3, 207);
+}
 
 .inputGroup-AGB {
     display: flex;
