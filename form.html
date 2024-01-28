@@ -15,132 +15,117 @@
   </head>
 
   <body>
-    <div class="form_container">
-      <div class="form">
-        <form
-          action="success.html"
-          onsubmit="checkInput()"
-          id="myForm"
-          name="myForm"
-        >
-          <!--Anrede-->
+    <main>
+      <div class="form_container">
+        <div class="form">
+          <form
+            action="success.html"
+            onsubmit="checkInput()"
+            id="myForm"
+            name="myForm"
+          >
+            <!--Anrede-->
 
-          <div class="inputGroup">
-            <label for="anrede">Anrede:</label>
-            <select name="" id="anrede">
-              <option value="Herr">Herr</option>
-              <option value="Frau">Frau</option>
-            </select>
-          </div>
+            <div class="inputGroup">
+              <label for="anrede">Anrede:</label>
+              <select name="" id="anrede">
+                <option value="Herr">Herr</option>
+                <option value="Frau">Frau</option>
+              </select>
+            </div>
 
-          <!--Vorname-->
-          <div class="inputGroup">
-            <label for="vorname">Vorname:</label>
-            <input
-              type="text"
-              name="vorname"
-              id="vorname"
-              placeholder="Vorname"
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--Nachname-->
-          <div class="inputGroup">
-            <label for="nachname">Nachname:</label>
+            <!--Vorname-->
+            <div class="inputGroup">
+              <label for="vorname">Vorname:</label>
+              <input
+                type="text"
+                name="vorname"
+                id="vorname"
+                placeholder="Vorname"
+                minlength="2"
+                maxlength="100"
+              />
+            </div>
+            <!--Nachname-->
+            <div class="inputGroup">
+              <label for="nachname">Nachname:</label>
 
-            <input
-              type="text"
-              name="nachname"
-              id="nachname"
-              placeholder="Nachname"
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--Geburtsdatum-->
-          <div class="inputGroup">
-            <label for="geburtsdatum">Geburtsdatum:</label>
-            <input type="date" name="geburtsdatum" id="geburtsdatum" />
-          </div>
-          <!--Strasse-->
-          <div class="inputGroup">
-            <label for="strasse">Strasse:</label>
-            <input
-              type="text"
-              name="strasse"
-              id="strasse"
-              placeholder="Strasse..."
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--PLZ-->
-          <div class="inputGroup">
-            <label for="plz">PLZ:</label>
-            <input
-              type="number"
-              name="plz"
-              id="plz"
-              placeholder="8000"
-              minlength="2"
-              maxlength="10"
-            />
-          </div>
-          <!--Ort-->
-          <div class="inputGroup">
-            <label for="ort">Ort:</label>
-            <input
-              type="text"
-              name="ort"
-              id="ort"
-              placeholder="Zürich"
-              minlength="2"
-              maxlength="100"
-            />
-          </div>
-          <!--E-mail-->
-          <div class="inputGroup">
-            <label for="email">E-mail:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="vorname@example.com"
-              minlength="3"
-              maxlength="100"
-              autocomplete="email"
-            />
-          </div>
-          <!--Vorname-->
-          <div class="inputGroup-AGB" style="position: relative">
-            <input type="checkbox" name="agb" id="agb" />
-            <div
-              class="coverInput"
-              style="
-                width: 2rem;
-                height: 2rem;
-                margin: 0;
-                padding: 0;
-                position: absolute;
-                bottom: auto;
-                top: auto;
-                background-color: #36a188;
-                z-index: 10;
-                opacity: 0.5;
-                border-radius: 0.1rem;
-                border: 1px solid #2d3e3a;
-              "
-            ></div>
+              <input
+                type="text"
+                name="nachname"
+                id="nachname"
+                placeholder="Nachname"
+                minlength="2"
+                maxlength="100"
+              />
+            </div>
+            <!--Geburtsdatum-->
+            <div class="inputGroup">
+              <label for="geburtsdatum">Geburtsdatum:</label>
+              <input type="date" name="geburtsdatum" id="geburtsdatum" />
+            </div>
+            <!--Strasse-->
+            <div class="inputGroup">
+              <label for="strasse">Strasse:</label>
+              <input
+                type="text"
+                name="strasse"
+                id="strasse"
+                placeholder="Strasse..."
+                minlength="2"
+                maxlength="100"
+              />
+            </div>
+            <!--PLZ-->
+            <div class="inputGroup">
+              <label for="plz">PLZ:</label>
+              <input
+                type="number"
+                name="plz"
+                id="plz"
+                placeholder="8000"
+                minlength="2"
+                maxlength="10"
+              />
+            </div>
+            <!--Ort-->
+            <div class="inputGroup">
+              <label for="ort">Ort:</label>
+              <input
+                type="text"
+                name="ort"
+                id="ort"
+                placeholder="Zürich"
+                minlength="2"
+                maxlength="100"
+              />
+            </div>
+            <!--E-mail-->
+            <div class="inputGroup">
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="vorname@example.com"
+                minlength="3"
+                maxlength="100"
+                autocomplete="email"
+              />
+            </div>
+            <!--Vorname-->
+            <div class="inputGroup-AGB" style="position: relative">
+              <input type="checkbox" name="agb" id="agb" />
+              <div class="coverInput"></div>
 
-            <label for="agb">I agree with the <b>terms of Lingua</b> </label>
-          </div>
+              <label for="agb">I agree with the <b>terms of Lingua</b> </label>
+            </div>
 
-          <input type="submit" value="BOOK NOW" id="submit_input" />
-        </form>
+            <input type="submit" value="BOOK NOW" id="submit_input" />
+          </form>
+        </div>
       </div>
-    </div>
-
+    </main>
     <script src="script.js"></script>
     <script src="form.js"></script>
   </body>
